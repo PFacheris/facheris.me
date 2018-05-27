@@ -5,7 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    // Use a hack to get around github pages not serving from subdirectories
+    path: path.resolve(__dirname, 'docs'),
     publicPath: '',
     filename: 'bundle.js'
   },
@@ -44,7 +45,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
         {from: './src/index.html', to: 'index.html' },
-        {from: './assets', to: '/' }
+        {from: './assets', to: path.resolve(__dirname, 'docs') }
       ], {}
     )
   ]
