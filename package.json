@@ -1,0 +1,31 @@
+{
+  "name": "facheris.me",
+  "version": "1.0.0",
+  "description": "Patrick Facheris personal website assets",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PFacheris/pfacheris.github.com.git"
+  },
+  "author": "Patrick Facheris",
+  "bugs": {
+    "url": "https://github.com/PFacheris/pfacheris.github.com/issues"
+  },
+  "homepage": "https://facheris.me",
+  "dependencies": {},
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "skeleton-sass-official": "^3.1.5",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4"
+  }
+}

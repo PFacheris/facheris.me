@@ -1,0 +1,104 @@
+@import "~normalize-scss/sass/normalize/import-now";
+
+// Skeleton Theme
+@import "~skeleton-sass-official/skeleton/core/config"; // Skeleton Sass core loader
+@import "~skeleton-sass-official/skeleton/themes/fresh/vars"; // theme variable overrides
+@import "~skeleton-sass-official/skeleton/themes/fresh/grid"; // theme grid styles
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,300i|Cedarville+Cursive');
+
+// Local
+@import 'colors';
+
+// Mixins
+//usage: @include shift([property],[duration],[easing]);
+@mixin transition($property: all, $duration: .3s, $ease: linear){
+	-webkit-transition: $property $duration $ease;
+	-moz-transition: $property $duration $ease;
+	-o-transition: $property $duration $ease;
+	transition: $property $duration $ease;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $background-color;
+  * {
+    font-family: 'Averia Serif Libre', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.table-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.table-block {
+  display: table-row;
+  height: 1px;
+}
+
+.footer-push {
+  height: auto;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.title {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.extra-title {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Cedarville Cursive', cursive;
+  font-weight: 300;
+}
+
+.tagline {
+  font-weight: 300;
+  line-height: 36px;
+}
+
+.divider {
+  max-width: 200px;
+  border-color: $font-dark-color;
+}
+
+.links {
+  text-align: center;
+}
+
+.social-link {
+  font-size: 50px;
+  margin: 10px 5%;
+  &:hover {
+      @include transition(opacity);
+      opacity: 0.5
+  }
+}
+
+.disclaimer, .copyright {
+  color: $font-light-color;
+  font-size: 10px;
+  font-weight: 300;
+  font-style: italic;
+  margin: 2px;
+}
+
+footer {
+  text-align: center;
+}
